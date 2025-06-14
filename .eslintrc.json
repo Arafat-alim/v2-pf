@@ -1,0 +1,19 @@
+{
+  "root": true,
+  "parser": "@babel/eslint-parser",
+  "extends": ["@upstatement"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "requireConfigFile": false,
+    "babelOptions": {
+      "presets": ["@babel/preset-react"]
+    }
+  },
+  "rules": {
+    "no-unused-vars": ["warn", { "varsIgnorePattern": "React" }]
+  }
+}

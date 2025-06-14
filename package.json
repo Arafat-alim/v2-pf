@@ -1,16 +1,36 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "v2",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Personal Website version: 2",
   "version": "0.1.0",
   "license": "0BSD",
+  "browserslist": "> 0.25%, not dead",
+  "author": "Arafat Aman Alim <dev.arafat.alim.gmail.com>",
+  "keywords": [
+    "gatsby",
+    "arafat-alim",
+    "arafat aman alim",
+    "full stack developer",
+    "full stack engineer"
+  ],
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "format": "prettier --write ."
+  },
+  "lint-staged": {
+    "*.{js,css,json,md}": [
+      "prettier --write"
+    ],
+    "*.js": [
+      "eslint --fix"
+    ]
   },
   "dependencies": {
     "gatsby": "^5.14.1",
@@ -19,9 +39,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/Arafat-alim/v2-pf"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.27.4",
+    "@babel/eslint-parser": "^7.27.5",
+    "@babel/preset-react": "^7.27.1",
+    "@upstatement/eslint-config": "^3.0.0",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.5.3"
   }
 }
